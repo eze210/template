@@ -20,13 +20,13 @@ public class QueueTests {
         assertEquals(queue.size(), 0);
     }
 
-    @Test(expected=AssertionError.class)
+    @Test(expected = AssertionError.class)
     public void emptyQueueThrowsAssertionErrorWhenTryingRemove() {
         Queue<Integer> queue = new LinkedQueue<>();
         queue.remove();
     }
 
-    @Test(expected=AssertionError.class)
+    @Test(expected = AssertionError.class)
     public void emptyQueueThrowsAssertionErrorWhenTryingGetTop() {
         Queue<Integer> queue = new LinkedQueue<>();
         queue.top();
