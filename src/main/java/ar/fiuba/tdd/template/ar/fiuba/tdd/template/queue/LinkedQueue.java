@@ -4,7 +4,7 @@ public class LinkedQueue<T> implements Queue<T> {
     private QueueNode<T> first;
 
     public LinkedQueue() {
-        first = new QueueNode<T>(new StrategyNodeEmpty<T>());
+        first = new QueueNode<>(new StrategyNodeEmpty<T>());
     }
 
     @Override
@@ -29,6 +29,6 @@ public class LinkedQueue<T> implements Queue<T> {
 
     @Override
     public void add(T item) {
-        first.getTailNode().setStrategy(new StrategyNodeNormal<T>(item));
+        first.getTailNode().setStrategy(new StrategyNodeNormal<>(item));
     }
 }

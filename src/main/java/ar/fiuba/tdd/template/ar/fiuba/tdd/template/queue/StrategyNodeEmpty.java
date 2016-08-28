@@ -1,7 +1,6 @@
 package ar.fiuba.tdd.template.ar.fiuba.tdd.template.queue;
 
-public class StrategyNodeEmpty<T> implements IStrategyNode<T>{
-
+class StrategyNodeEmpty<T> implements IStrategyNode<T> {
     @Override
     public int getSize() {
         return 0;

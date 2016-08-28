@@ -1,33 +1,33 @@
 package ar.fiuba.tdd.template.ar.fiuba.tdd.template.queue;
 
-public class QueueNode<T> {
-    IStrategyNode<T> strategy;
+class QueueNode<T> {
+    private IStrategyNode<T> strategy;
 
-    public QueueNode(IStrategyNode<T> strategy) {
+    QueueNode(IStrategyNode<T> strategy) {
         this.strategy = strategy;
     }
 
-    public void setStrategy(IStrategyNode<T> strategy){
+    void setStrategy(IStrategyNode<T> strategy) {
         this.strategy = strategy;
     }
 
-    public boolean isEmpty() {
+    boolean isEmpty() {
         return strategy.isEmpty();
     }
 
-    public int getSize() {
+    int getSize() {
         return strategy.getSize();
     }
 
-    public T getItem() {
+    T getItem() {
         return strategy.getItem();
     }
 
-    public QueueNode<T> getNext() {
+    QueueNode<T> getNext() {
         return strategy.getNext();
     }
 
-    public QueueNode<T> getTailNode() {
+    QueueNode<T> getTailNode() {
         return strategy.getTailNode(this);
     }
 }

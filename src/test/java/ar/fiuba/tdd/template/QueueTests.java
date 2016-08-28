@@ -4,39 +4,37 @@ import ar.fiuba.tdd.template.ar.fiuba.tdd.template.queue.LinkedQueue;
 import ar.fiuba.tdd.template.ar.fiuba.tdd.template.queue.Queue;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class QueueTests {
 
     @Test
     public void emptyQueueIsEmptyTest() {
-        Queue<Integer> queue = new LinkedQueue<Integer>();
+        Queue<Integer> queue = new LinkedQueue<>();
         assertTrue(queue.isEmpty());
     }
 
     @Test
     public void emptyQueueSizeIsZeroTest() {
-        Queue<Integer> queue = new LinkedQueue<Integer>();
+        Queue<Integer> queue = new LinkedQueue<>();
         assertEquals(queue.size(), 0);
     }
 
     @Test(expected=AssertionError.class)
     public void emptyQueueThrowsAssertionErrorWhenTryingRemove() {
-        Queue<Integer> queue = new LinkedQueue<Integer>();
+        Queue<Integer> queue = new LinkedQueue<>();
         queue.remove();
     }
 
     @Test(expected=AssertionError.class)
     public void emptyQueueThrowsAssertionErrorWhenTryingGetTop() {
-        Queue<Integer> queue = new LinkedQueue<Integer>();
+        Queue<Integer> queue = new LinkedQueue<>();
         queue.top();
     }
 
     @Test
     public void oneElementTest() {
-        Queue<Integer> queue = new LinkedQueue<Integer>();
+        Queue<Integer> queue = new LinkedQueue<>();
 
         /* queue starts empty */
         assertTrue(queue.isEmpty());
@@ -58,7 +56,7 @@ public class QueueTests {
 
     @Test
     public void fifoTest() {
-        Queue<Integer> queue = new LinkedQueue<Integer>();
+        Queue<Integer> queue = new LinkedQueue<>();
 
         /* inserts a fixed number of elements */
         int numberOfElementsToAdd = 200;
@@ -77,7 +75,7 @@ public class QueueTests {
 
     @Test
     public void sizeTest() {
-        Queue<Integer> queue = new LinkedQueue<Integer>();
+        Queue<Integer> queue = new LinkedQueue<>();
 
         /* queue starts empty */
         assertTrue(queue.isEmpty());

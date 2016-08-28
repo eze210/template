@@ -1,10 +1,10 @@
 package ar.fiuba.tdd.template.ar.fiuba.tdd.template.queue;
 
-public class StrategyNodeNormal<T> implements IStrategyNode<T> {
-    private QueueNode<T> next = new QueueNode<T>(new StrategyNodeEmpty<T>());
-    private T item;
+class StrategyNodeNormal<T> implements IStrategyNode<T> {
+    private final QueueNode<T> next = new QueueNode<>(new StrategyNodeEmpty<T>());
+    private final T item;
 
-    public StrategyNodeNormal(T item){
+    StrategyNodeNormal(T item) {
         this.item = item;
     }
 
